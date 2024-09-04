@@ -1,0 +1,9 @@
+client
+
+npm create vite@latest ./ 
+
+install tailwind css for vite from docs
+
+npm i file-saver
+
+npm i react-router-dom
