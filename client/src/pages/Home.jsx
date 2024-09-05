@@ -37,11 +37,11 @@ const Home = () => {
         name="text"
         placeholder="Search something..."
         value={searchText}
-        handleChange={handleSearchChange}
+        // handleChange={handleSearchChange}
       />
     </div>
 
-    <div className="mt-10">
+    {/* <div className="mt-10">
       {loading ? (
         <div className="flex justify-center items-center">
           <Loader />
@@ -68,7 +68,7 @@ const Home = () => {
           </div>
         </>
       )}
-    </div>
+    </div> */}
   </section>
 );
 };

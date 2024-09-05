@@ -1,0 +1,15 @@
+
+#initializes empty package.json file
+npm init -y 
+
+#to store images
+npm i cloudinary
+
+#for connecting backend to frontend
+npm i cors
+
+npm i mongoose
+
+npm i nodemon 
+
+npm i openai
