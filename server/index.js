@@ -1,13 +1,13 @@
 import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
-
+import connectDB from "./mongodb/connect";
 
 dotenv.config();
 
 const app = express();
 
-const port =3000;
+const port = 8080;
 
 app.use(cors());
 
@@ -17,10 +17,23 @@ app.get("/", async(req, res)=>{
     res.send("Hello from Image_Gen");
 });
 
+const startServer = async() => {
+    try{
+        // connectDB(process.env.MONGODB_URL);
+        app.listen(port, (port)=>{
+            console.log(`Server running on http://localhost:${port}`);
+        })
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
 // const startServer = async() => {
-//     app.listen(8080, ()=> console.log("Server has started on port http://localhost:8080"));
+//     app.listen(port, ()=>{
+//         console.log(`runnning on ${port}`);
+//     })   
 // }
 
-app.listen(port, async()=>{
-    console.log("Server has started on port http://localhost:3000");
-})
+startServer();
+
