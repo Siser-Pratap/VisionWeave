@@ -18,4 +18,6 @@ router.route("/").get((req, res)=> {
     res.send("Hello from Image_Gen");
 });
 
+export default router;
+
 
