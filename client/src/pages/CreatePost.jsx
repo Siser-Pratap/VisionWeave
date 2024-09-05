@@ -31,7 +31,11 @@ const CreatePost = () => {
   const handleSurpriseMe = () => {
 
   }
-  
+
+  const generateImage = () => {
+    
+  }
+
   return (
     <section className="max-w-7xl mx-auto">
       <div>
