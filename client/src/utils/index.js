@@ -1,4 +1,4 @@
-import surpriseMePrompts from "../constants/index.js";
+import {surpriseMePrompts} from "../constants"
 
 
 export function getRandomPrompt(prompt){
