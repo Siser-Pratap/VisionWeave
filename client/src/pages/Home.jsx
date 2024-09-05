@@ -2,10 +2,28 @@ import React, { useEffect, useState } from 'react';
 
 import { Card, FormField, Loader } from '../components';
 
+const RenderCards = ({data, title}) => {
+  if (data?.length>0){ return data.map((post)=>{
+    <Card key={post._id} {...post} /> }
+  )}
+
+  return (
+    <h2 className='mt-5 font-bold text-[#6449ff] text-xl uppercase'>{title}</h2>
+  )
+
+
+}
+
+
 const Home = () => {
 
   const [loading, setLoading] = useState(false);
-  const [allPosts, setAllPosts] = useStata(null);
+
+  const [allPosts, setAllPosts] = useState(null);
+
+  const [searchText, setSearchText] = useState("");
+
+
 
   return (
     <section className="max-w-7xl mx-auto">
