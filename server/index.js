@@ -3,6 +3,10 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./mongodb/connect.js";
 
+import imageRoutes from "./routes/imageRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
+
+
 dotenv.config();
 
 const app = express();
@@ -10,6 +14,9 @@ const app = express();
 const port = 8080;
 
 app.use(cors());
+app.use("/api/v1/post", postRoutes);
+app.use("/api/v1/image", imageRoutes);
+
 
 app.use(express.json({limit:"50mb"}));
 
