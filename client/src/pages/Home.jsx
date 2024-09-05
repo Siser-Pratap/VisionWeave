@@ -10,8 +10,6 @@ const RenderCards = ({data, title}) => {
   return (
     <h2 className='mt-5 font-bold text-[#6449ff] text-xl uppercase'>{title}</h2>
   )
-
-
 }
 
 
@@ -58,12 +56,12 @@ const Home = () => {
           <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
             {searchText ? (
               <RenderCards
-                data={searchedResults}
+                data={[]}
                 title="No Search Results Found"
               />
             ) : (
               <RenderCards
-                data={allPosts}
+                data={[]}
                 title="No Posts Yet"
               />
             )}
