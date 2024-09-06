@@ -96,6 +96,7 @@ dotenv.config();
 const router = express.Router();
 
 const configuration = new Configuration({
+<<<<<<< HEAD
   apiKey: process.env.OPENAI_API_KEY,
 });
 
@@ -130,4 +131,15 @@ router.route('/').post(async(req, res) => {
 });
 
 export default router;
+=======
+    apiKey: process.env.OPENAI_API_KEY,
+})
+
+const openai = new OpenAIApi(configuration);
+
+router.route("/").get((req, res)=> {
+    res.send("Hello from Image_Gen");
+});
+
+>>>>>>> eed61a9 (Initialized openaiapi key along with its intitialization in imageRoutes.js)
 
