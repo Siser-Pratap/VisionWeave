@@ -21,6 +21,11 @@ const Home = () => {
 
   const [searchText, setSearchText] = useState("");
 
+  const handleSearchChange = () => {
+    console.log("working");
+
+  };
+
 
 
   return (
@@ -37,7 +42,7 @@ const Home = () => {
         name="text"
         placeholder="Search something..."
         value={searchText}
-        // handleChange={handleSearchChange}
+        handleChange={handleSearchChange}
       />
     </div>
 
