@@ -21,11 +21,18 @@ const port = 8080;
 
 
 
+
+
+
+
 //middleware middle
 app.use(cors());
-app.use("/api/v1/post", postRoutes);
-app.use("/api/v1/image", imageRoutes);
 app.use(express.json());
+
+app.use("/api/v1/post", postRoutes);
+app.use('/api/v1/image', imageRoutes);
+
+
 
 
 
