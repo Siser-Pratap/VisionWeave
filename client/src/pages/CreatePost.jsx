@@ -62,6 +62,7 @@ const CreatePost = () => {
 
     if(form.prompt && form.url){
       setLoading(true);
+      
       try {
         const response = await fetch("http://localhost:8080/api/v1/post",{
           method:"POST",
@@ -70,10 +71,9 @@ const CreatePost = () => {
           },
           body: JSON.stringify({...form}),
         });
-
         await response.json();
         alert("Success");
-        navigate("/")
+        navigate("/");
   
       } catch (error) {
         console.log(error.message);
