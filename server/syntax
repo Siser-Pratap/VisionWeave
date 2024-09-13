@@ -15,3 +15,6 @@ npm i nodemon
 npm i openai
 
 npm i dotenv
+
+
+cloudinary for hosting images
