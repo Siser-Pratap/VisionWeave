@@ -147,6 +147,8 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
@@ -158,7 +160,7 @@ const CreatePost = () => {
   const [form, setForm] = useState({
     name: '',
     prompt: '',
-    photo:"",
+    url:"",
   });
 
   const [generatingImg, setGeneratingImg] = useState(false);
@@ -171,33 +173,66 @@ const CreatePost = () => {
     setForm({ ...form, prompt: randomPrompt });
   };
 
-  const generateImage = async () => {
-    if (form.prompt) {
-      try {
-        setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/image', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            prompt: form.prompt,
-          }),
-        });
+  
 
-        const data = await response.json();
-        setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
+
+  
+  
+
+
+
+
+  const generateImage = async () => {
+  //   if (form.prompt) {
+  //     try {
+  //       setGeneratingImg(true);
+  //       const response = await fetch('http://localhost:8080/api/v1/image', {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify({
+  //           prompt: form.prompt,
+  //         }),
+  //       });
+
+  //       const data = await response.json();
+  //       setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` });
         
 
 
-      } catch (err) {
-        alert(err);
-      } finally {
-        setGeneratingImg(false);
-      }
-    } else {
-      alert('Please provide proper prompt');
-    }
+  //     } catch (err) {
+  //       alert(err);
+  //     } finally {
+  //       setGeneratingImg(false);
+  //     }
+  //   } else {
+  //     alert('Please provide proper prompt');
+  //   }
+
+  const options = {
+    method: 'POST',
+    url: 'https://api.getimg.ai/v1/flux-schnell/text-to-image',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      authorization: 'Bearer key-4SE8wefN1bTDZFuY8iGbbAvk7YrSanclKRb0Wmyyz4TZm5fChAvnEJpVv6lzGrvsRab4FnbWOKNJOdsZDnyuWP7w1Iz5poL7'
+    },
+    data: {prompt: `${form.prompt}`, response_format: 'url'}
+  };
+
+  try {
+    const response = await axios.request(options);
+    console.log(response.data);
+    setForm({ ...form, url: response.data.url });
+    
+  } catch (error) {
+    console.log(error.message);
+  }
+
+
+
+
   };
 
   const handleSubmit = async (e) => {
@@ -257,9 +292,9 @@ const CreatePost = () => {
           />
 
           <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
-            { form.photo ? (
+            { form.url ? (
               <img
-                src={form.photo}
+                src={form.url}
                 alt={form.prompt}
                 className="w-full h-full object-contain"
               />
