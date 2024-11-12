@@ -5,7 +5,7 @@ import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 import { fetchImages } from '../services/model-api';
-import RecentResults from '../components/RecentResults';
+
 
 const CreatePost = () => {
 
@@ -55,7 +55,9 @@ const CreatePost = () => {
       fileReaderInstance.onload = () => {
         let base64data = fileReaderInstance.result;
         setImageResult(base64data);
+        console.log(base64data)
         setForm({ ...form, url: base64data });
+        console.log(form);
       };
       // Use the readAsDataURL() method of the FileReader instance to read the image Blob and convert it into a data URL
       fileReaderInstance.readAsDataURL(imageBlob);
@@ -181,11 +183,7 @@ const CreatePost = () => {
             {loading ? 'Sharing...' : 'Share with the Community'}
           </button>
         </div>
-        <RecentResults
-        promptQuery={form.prompt}
-        imageResult={imageResult}
-        onSelect={handleAvailOptions}
-      />
+        
       </form>
     </section>
   );
