@@ -4,6 +4,8 @@ import axios from 'axios';
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
+import { fetchImages } from '../services/model-api';
+import RecentResults from '../components/RecentResults';
 
 const CreatePost = () => {
 
@@ -15,9 +17,15 @@ const CreatePost = () => {
     url:"",
   });
 
+  const handleAvailOptions = (option) => {
+    setPromptQuery(option);
+  };
+
+
   const [generatingImg, setGeneratingImg] = useState(false);
 
   const [loading, setLoading] = useState(false);
+  const [imageResult, setImageResult] = useState(null);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -26,36 +34,47 @@ const CreatePost = () => {
     setForm({ ...form, prompt: randomPrompt });
   };
 
-  const generateImage = async () => {
-    const options = {
-      method: 'POST',
-      url: 'https://api.getimg.ai/v1/flux-schnell/text-to-image',
-      headers: {
-        accept: 'application/json',
-        'content-type': 'application/json',
-        authorization: 'Bearer key-4SE8wefN1bTDZFuY8iGbbAvk7YrSanclKRb0Wmyyz4TZm5fChAvnEJpVv6lzGrvsRab4FnbWOKNJOdsZDnyuWP7w1Iz5poL7'
-      },
-      data: {prompt: `${form.prompt}`, response_format: 'url'}
-    };
+  
+  const handleGenerate = (e) => {
+    e.preventDefault();
+    fetchData();
+  };
 
+  const fetchData = async () => {
+    const promptQuery = form.prompt;
+    console.log(promptQuery);
+  
     try {
-      setGeneratingImg(true);
-      const response = await axios.request(options);
-      console.log(response.data);
-      setForm({ ...form, url: response.data.url });
+      const imageBlob = await fetchImages(
+        promptQuery
+      );
+
       
+      const fileReaderInstance = new FileReader();
+      // This event will fire when the image Blob is fully loaded and ready to be displayed
+      fileReaderInstance.onload = () => {
+        let base64data = fileReaderInstance.result;
+        setImageResult(base64data);
+        setForm({ ...form, url: base64data });
+      };
+      // Use the readAsDataURL() method of the FileReader instance to read the image Blob and convert it into a data URL
+      fileReaderInstance.readAsDataURL(imageBlob);
+  
+      // Create a URL from the image Blob
+      
+      
+      // Set the image URL directly as the result
+      
+      
+
       
     } catch (error) {
-      console.log(error.message);
+      // Handle error
+      console.error("Error fetching images from API:", error);
     }
-    finally{
-      setGeneratingImg(false);
-    }
-
-
-
-
   };
+  
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,7 +83,7 @@ const CreatePost = () => {
       setLoading(true);
       
       try {
-        const response = await fetch("https://image-gen-rnty.onrender.com/api/v1/post",{
+        const response = await fetch("http://localhost:8080/api/v1/post",{
           method:"POST",
           headers:{
             'Content-Type': 'application/json',
@@ -121,9 +140,9 @@ const CreatePost = () => {
           />
 
           <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
-            { form.url ? (
+            { imageResult ? (
               <img
-                src={form.url}
+                src={imageResult}
                 alt={form.prompt}
                 className="w-full h-full object-contain"
               />
@@ -146,7 +165,7 @@ const CreatePost = () => {
         <div className="mt-5 flex gap-5">
           <button
             type="button"
-            onClick={generateImage}
+            onClick={handleGenerate}
             className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {generatingImg ? 'Generating...' : 'Generate'}
@@ -162,6 +181,11 @@ const CreatePost = () => {
             {loading ? 'Sharing...' : 'Share with the Community'}
           </button>
         </div>
+        <RecentResults
+        promptQuery={form.prompt}
+        imageResult={imageResult}
+        onSelect={handleAvailOptions}
+      />
       </form>
     </section>
   );
