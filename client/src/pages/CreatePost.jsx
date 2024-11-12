@@ -45,6 +45,7 @@ const CreatePost = () => {
     console.log(promptQuery);
   
     try {
+      setGeneratingImg(true);
       const imageBlob = await fetchImages(
         promptQuery
       );
@@ -69,7 +70,7 @@ const CreatePost = () => {
       
       
 
-      
+      setGeneratingImg(false);
     } catch (error) {
       // Handle error
       console.error("Error fetching images from API:", error);
