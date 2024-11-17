@@ -80,7 +80,7 @@ const Home = () => {
 
 
   return (
-
+    <div className='mt-20'>
     <section className="max-w-7xl mx-auto">
     <div>
       <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
@@ -127,6 +127,7 @@ const Home = () => {
       )}
     </div>
   </section>
+  </div>
    
 );
 };
