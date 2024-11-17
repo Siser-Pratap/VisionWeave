@@ -15,6 +15,9 @@ export default {
         'secondary': 'linear-gradient(to right, #16bffd, #cb3066)',
         
         'tertiary': 'linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e)',
+        
+        "robot-pattern": "url('./bg-img.jpg')",
+        
 
 
       },
