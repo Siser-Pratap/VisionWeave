@@ -16,7 +16,7 @@ export default {
         
         'tertiary': 'linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e)',
         
-        "robot-pattern": "url('./bg-img.jpg')",
+        "robot-pattern": "url('./img.jpg')",
         
 
 
