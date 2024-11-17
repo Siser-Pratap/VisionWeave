@@ -110,9 +110,9 @@ const App = () => {
     
 
   <div className='relative '>
-    <div className='absolute z-[0] w-full'>
-      <nav ref={nav} class="bg-[#151030] min-w-md ">
-        <div class="max-w-screen-xl ml-[20px] flex flex-wrap w-full items-center  justify-between p-6 min-w-">
+    <div className='absolute z-[0] w-full min-w-[383px]'>
+      <nav ref={nav} class="bg-[#151030] min-w-[383px] ">
+        <div class="max-w-screen-xl ml-[20px] flex flex-wrap w-full items-center justify-between p-6 ">
           <a href="/" class="flex items-center jus space-x-3 ml-[35px] rtl:space-x-reverse">
             
               <img ref={image} src="/logo.png" className='h-12 w-auto  logo ' alt="logo" />
