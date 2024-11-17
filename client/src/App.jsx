@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef, useEffect } from 'react';
 
 
+
 import { logo } from './assets';
 import { Home, CreatePost } from './pages';
 
@@ -21,11 +22,31 @@ const App = () => {
   const nav = useRef();
   const navItems = useRef();
   const hover = useRef();
-  const navValues = document.querySelector(".navValues"); 
+  const navValues = document.querySelector(".navValues");  
+  const image =useRef(); 
 
   useGSAP(() => {
+    gsap.from(image.current,{
+      opacity: 0,
+      x:"-100px",
+      rotate: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      repeat:-1,
+      yoyo: true,
+    })
     gsap.set(".navValues",{y:"-100vh", opacity:0,});
-   gsap.set(back.current, {x:"-100vw"});
+    gsap.set(back.current, {x:"-100vw"});
+    gsap.to(image.current, {
+      opacity:1,
+      x:"0",
+      delay:0.2,
+      duration:2,
+      ease:"power2.inOut",
+      stagger:1,
+    })
+
+    
    tl.current = gsap
          .timeline({paused:true})
          .to(back.current, {
@@ -53,6 +74,11 @@ const App = () => {
      tl.current.play();
    }
  },[medium])
+
+ useEffect(()=>{
+  
+  
+ },[]);
 
 
  
@@ -85,13 +111,14 @@ const App = () => {
   <div className='relative '>
     <div className='absolute z-[0] w-full'>
       <nav ref={nav} class="bg-[#151030] ">
-        <div class="max-w-screen-xl flex flex-wrap w-full items-center justify-between p-6 min-w-[314px]">
+        <div class="max-w-screen-xl ml-[20px] flex flex-wrap w-full items-center  justify-between p-6 min-w-[314px]">
           <a href="/" class="flex items-center jus space-x-3 ml-[35px] rtl:space-x-reverse">
-              <img src="" className='h-8 ' alt="logo" />
+            
+              <img ref={image} src="/logo.png" className='h-12 w-auto  logo ' alt="logo" />
               <span class="self-center name  text-[#fff]  text-[1.5rem] font-[400] transform hover:translate-y-[-3px] transition duration-300 ease-in-out  whitespace-nowrap hover:text-transparent hover:bg-secondary hover:bg-clip-text">Name</span>
           </a>
-          <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-              <button type="button" class="font-medium rounded-[20px] text-white text-sm px-4  py-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem]">Create</button>
+          <div class="flex justify-end md:order-2  ">
+              <button type="button" class="font-medium justify-end rounded-[20px] text-white text-sm px-4  py-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] mr-[4px]">Create</button>
               <button onClick={()=>setmedium(!medium)} data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden " aria-controls="navbar-cta" aria-expanded="false">
                 {medium?(<svg className="navButtons w-5 h-5  text-white font-bold" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  fill="white" 
                           stroke="white" strokeWidth="4" viewBox="0 0 64 64"><path d="M 16 14 C 15.488 14 14.976938 14.194937 14.585938 14.585938 C 13.804937 15.366937 13.804937 16.633063 14.585938 17.414062 L 29.171875 32 L 14.585938 46.585938 C 13.804938 47.366938 13.804937 48.633063 14.585938 49.414062 C 14.976937 49.805062 15.488 50 16 50 C 16.512 50 17.023062 49.805062 17.414062 49.414062 L 32 34.828125 L 46.585938 49.414062 C 47.366938 50.195063 48.633063 50.195062 49.414062 49.414062 C 50.195063 48.633062 50.195062 47.366937 49.414062 46.585938 L 34.828125 32 L 49.414062 17.414062 C 50.195063 16.633063 50.195062 15.366938 49.414062 14.585938 C 48.633062 13.804938 47.366937 13.804938 46.585938 14.585938 L 32 29.171875 L 17.414062 14.585938 C 17.023062 14.194938 16.512 14 16 14 z"></path>
