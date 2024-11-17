@@ -16,7 +16,7 @@ export default {
         
         'tertiary': 'linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e)',
         
-        "robot-pattern": "url('./img.jpg')",
+        "robot-pattern": "url('/images/bg.jpg')",
         
 
 
@@ -24,6 +24,11 @@ export default {
       
     },
   },
+  
+  safelist: [
+    'bg-[url("/images/bg.jpg")]',
+    
+  ],
   plugins: [],
 }
 
