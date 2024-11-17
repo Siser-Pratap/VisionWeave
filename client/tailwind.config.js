@@ -16,7 +16,7 @@ export default {
         
         'tertiary': 'linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e)',
         
-        "robot-pattern": "url('./img.jpg')",
+        "robot-pattern": "url('https://res.cloudinary.com/di4jbsdwo/image/upload/v1726250205/hxjn533ckxv6yvnk2xre.jpg')",
         
 
 
