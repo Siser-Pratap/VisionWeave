@@ -68,11 +68,23 @@ const Home = () => {
 
 useEffect(() => {
   const img1 = document.querySelector(".image1");
+  const img2 = document.querySelector(".image2");
+  const img3 = document.querySelector(".image3");
+  const img4 = document.querySelector(".image4");
+
+
+
   const carousel = document.querySelector(".carousel");
+
+  const map = [
+    {
+      "targetimg":"img1",
+    },
+  ]
   
 
   img1.addEventListener("mouseenter", () => {
-    img1.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; // Replace with your desired image URL
+    img1.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
     
     gsap.to(img1, {
       duration: 0,
@@ -88,7 +100,7 @@ useEffect(() => {
   });
 
   img1.addEventListener("mouseleave", () => {
-    img1.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; // Replace with the original image URL
+    img1.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
     gsap.to(img1, {
       duration: 0,
       ease: "power1.out",
@@ -99,6 +111,94 @@ useEffect(() => {
       duration:1,
     })
 });
+
+img2.addEventListener("mouseenter", () => {
+  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  
+  gsap.to(img2, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(0)",
+    
+  });
+  gsap.to(".hello2", {
+    scale:1.05,
+    duration:1,
+  })
+  
+});
+
+img2.addEventListener("mouseleave", () => {
+  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  gsap.to(img2, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(2px)",
+  });
+  gsap.to(".hello2", {
+    scale:1,
+    duration:1,
+  })
+});
+
+img3.addEventListener("mouseenter", () => {
+  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  
+  gsap.to(img3, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(0)",
+    
+  });
+  gsap.to(".hello3", {
+    scale:1.05,
+    duration:1,
+  })
+  
+});
+
+img3.addEventListener("mouseleave", () => {
+  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  gsap.to(img3, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(2px)",
+  });
+  gsap.to(".hello3", {
+    scale:1,
+    duration:1,
+  })
+});
+
+img4.addEventListener("mouseenter", () => {
+  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  
+  gsap.to(img4, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(0)",
+    
+  });
+  gsap.to(".hello4", {
+    scale:1.05,
+    duration:1,
+  })
+  
+});
+
+img4.addEventListener("mouseleave", () => {
+  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  gsap.to(img4, {
+    duration: 0,
+    ease: "power1.out",
+    filter:"blur(2px)",
+  });
+  gsap.to(".hello4", {
+    scale:1,
+    duration:1,
+  })
+});
+
 
 carousel.addEventListener("mouseenter", () => {
   gsap.to(carousel, {
@@ -348,38 +448,24 @@ carousel.addEventListener("mouseleave", () => {
         <div  class="hello1 overflow-hidden shadow-lg rounded-3xl cursor-pointer">
           <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image1 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
         </div>
-        <div  class="max-w-sm hello overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+        <div  class="max-w-sm hello2 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image2 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
         </div>
-        <div  class="max-w-sm hello overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+        <div  class="max-w-sm hello3 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image3 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
         </div>
-        <div  class="max-w-sm hello overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+        <div  class="max-w-sm hello4 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image4 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
         </div>
-        
-        
       </div>
     </div>
-  
-
-      
-
-
-
-
-
-
-
-
-    <div className='mt-20'>
+    <div className=' bg-[#050816]'>
+      <div className='flex justify-center items-center flex-col gap-[20px]'>
+        <p className="mt-0 text-balance text-3xl font-semibold tracking-tight text-transparent bg-secondary bg-clip-text sm:text-6xl ml-16 sm:m-0 p-2">Choose the right plan for you</p>
+        <p className="mt-8 max-w-2xl text-pretty text-center text-lg font-medium text-gray-400 sm:text-xl/8 mx-1 sm:mx-0">Browse through a collection of imaginative and visually stunning images generated by Dall-E AI</p>
+      </div>
     <section className="max-w-7xl mx-auto">
-    <div>
-      <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
-      <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Browse through a collection of imaginative and visually stunning images generated by DALL-E AI</p>
-    </div>
-
-    <div className="mt-16">
+    <div className="mt-16  ">
       <FormField
         labelName="Search posts"
         type="text"
@@ -387,6 +473,7 @@ carousel.addEventListener("mouseleave", () => {
         placeholder="Search something..."
         value={searchText}
         handleChange={handleSearchChange}
+        
       />
     </div>
 
