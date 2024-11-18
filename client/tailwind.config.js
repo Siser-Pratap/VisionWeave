@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT( {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -17,7 +19,7 @@ export default {
         'tertiary': 'linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e)',
         
         "robot-pattern": "url('/images/bg.jpg')",
-        "love":"url('/images/digbg.jpg')",
+        "love":"url('/images/dignew.jpg')",
         
 
 
@@ -30,6 +32,6 @@ export default {
     'bg-[url("/images/bg.jpg")]',
     
   ],
-  plugins: [],
-}
+  plugins: [require('daisyui'),],
+});
 

@@ -4,6 +4,8 @@ import { Card, FormField, Loader } from '../components';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { Carousel } from "@material-tailwind/react";
+
 
 
 const RenderCards = ({ data, title }) => {
@@ -97,35 +99,71 @@ const Home = () => {
 
   return (
     <>
-      <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
-        {/* <div className="h-auto w-auto flex items-end justify-center">
-          <div className='mb-[5vw]'>
-            <img
-              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-              alt="image description"
-            />
+    <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
+      <div className='w-full h-full mt-32 flex justify-center items-center flex-col gap-[0.2rem] sm:flex-row sm:mt-40 sm:gap-[4rem] '>
+        <div className='h-[50%] w-[50%] flex flex-col ml-0 sm:ml-20 '>
+          <div className='flex justify-center items-center flex-col gap-[0.2rem] sm:gap-[2rem]'>
+            <h1 className='font-[Ancient] text-[2rem] text-transparent bg-secondary bg-clip-text'>Creativity, Unleashed.</h1>
+            <p>Leverage generative AI with a unique suite of tools to convey your ideas to the world.</p>
           </div>
+          <div className='button mt-2 sm:mt-20'>
+              <button>Get Started</button>
+              <button>Developer </button>
+            </div>
         </div>
-        <div className="h-auto w-auto flex items-end ">
-          <div className='mb-[5vw]'>
-            <img
-              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-              alt="image description"
-            />
-          </div>
+        <div className='h-[80%] w-[80%] mb-40 sm:ml-20 sm:h-[50%] sm:w-[50%] sm:mb-20'>
+            <div className='w-full sm:w-auto'>
+              <Carousel
+                className="rounded-xl w-full h-80"
+                autoplay="true"
+                autoplayDelay={1500}
+                loop="true"
+                navigation={({ setActiveIndex, activeIndex, length }) => (
+                  <div className="absolute bottom-4 left-2/4 z-1 flex -translate-x-2/4 gap-2">
+                    {new Array(length).fill("").map((_, i) => (
+                      <span
+                        key={i}
+                        className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                          activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                        }`}
+                        onClick={() => setActiveIndex(i)}
+                      />
+                    ))}
+                  </div>
+                )}
+                >
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"
+                    alt="image 1"
+                    className='h-full w-full object-contain'
+                    
+                  />
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"
+                    alt="image 2"
+                    className="h-full w-full object-contain"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726250205/hxjn533ckxv6yvnk2xre.jpg"
+                    alt="image 3"
+                    className="h-full w-full object-contain"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1731417209/xpyd4ktvj9kxg5afxqkc.jpg"
+                    alt="image 3"
+                    className="h-full w-full object-contain"
+                  />
+                </Carousel>
+            </div>
         </div>
-        <div className="h-auto w-auto flex items-start">
-          <div className='mb-[5vw]'>
-            <img
-              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
-              alt="image description"
-            />
-          </div>
-        </div> */}
       </div>
+  
+  </div>
+  
+
+      
+
+
 
 
 
