@@ -135,23 +135,33 @@ const Home = () => {
                   <img
                     src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"
                     alt="image 1"
-                    className='h-full w-full object-contain '
+                    className='h-full w-full object-contain rounded-2xl'
                     
                   />
                   <img
                     src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"
                     alt="image 2"
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain rounded-2xl"
                   />
                   <img
                     src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726250205/hxjn533ckxv6yvnk2xre.jpg"
                     alt="image 3"
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain rounded-2xl"
                   />
                   <img
                     src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1731417209/xpyd4ktvj9kxg5afxqkc.jpg"
                     alt="image 3"
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-contain rounded-2xl"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726245135/ji1ddkko6dq96vczswwq.jpg"
+                    alt="image 3"
+                    className="h-full w-full object-contain rounded-2xl"
+                  />
+                  <img
+                    src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726429140/lzsblbv4qoanutf63fpy.jpg"
+                    alt="image 3"
+                    className="h-full w-full object-contain rounded-2xl"
                   />
                 </Carousel>
             </div>

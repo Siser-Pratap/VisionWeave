@@ -25,48 +25,46 @@ const App = () => {
   const hover = useRef();
   const navValues = document.querySelector(".navValues");  
   const image =useRef(); 
-
   useGSAP(() => {
-    gsap.from(image.current,{
+    gsap.from(image.current, {
       opacity: 0,
-      x:"-80px",
+      x: "-80px",
       rotate: 0,
-      duration: 1,
-      ease: "power2.inOut",
-      repeat:-1,
+      duration: 0.8,
+      ease: "power1.inOut",
+      repeat: -1,
       yoyo: true,
-    })
-    gsap.set(".navValues",{y:"-100vh", opacity:0,});
-    gsap.set(back.current, {x:"-100vw"});
+    });
+  
+    gsap.set(".navValues", { y: "-100vh", opacity: 0, transform: "translate3d(0, 0, 0)" });
+    gsap.set(back.current, { x: "-100vw" });
+  
     gsap.to(image.current, {
-      opacity:1,
-      x:"0",
-      delay:0.2,
-      duration:2,
-      ease:"power2.inOut",
-      stagger:1,
-    })
-
-    
-   tl.current = gsap
-         .timeline({paused:true})
-         .to(back.current, {
-           zIndex:2,
-           x:0,
-           duration:0.6,
-           ease:"power2.inOut",
-         })
-         .to(".navValues",{
-           y:0,
-           duration:0.4,
-           stagger:-0.2,
-           ease:"power4.inOut",
-           delay:-0.25,
-           opacity:1,
-         });
-         
-    
- });
+      opacity: 1,
+      x: "0",
+      delay: 0.1,
+      duration: 1.5,
+      ease: "power3.inOut",
+      stagger: 0.5,
+    });
+  
+    tl.current = gsap
+      .timeline({ paused: true })
+      .to(back.current, {
+        zIndex: 2,
+        x: 0,
+        duration: 0.4,
+        ease: "power1.inOut",
+      })
+      .to(".navValues", {
+        y: 0,
+        duration: 0.3,
+        stagger: 0.1,
+        ease: "expo.inOut",
+        opacity: 1,
+      });
+  });
+  
  useEffect(()=>{
    if(!medium){
      tl.current.reverse();
