@@ -20,6 +20,7 @@ module.exports = withMT( {
         
         "robot-pattern": "url('/images/bg.jpg')",
         "love":"url('/images/dignew.jpg')",
+        "stars":"url('/images/pexels.jpg)",
         
 
 

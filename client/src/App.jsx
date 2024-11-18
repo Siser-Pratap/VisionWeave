@@ -54,7 +54,8 @@ const App = () => {
         zIndex: 2,
         x: 0,
         duration: 0.4,
-        ease: "power1.inOut",
+        stagger:-1,
+        ease: "expo.inOut",
       })
       .to(".navValues", {
         y: 0,

@@ -50,11 +50,6 @@ body{
     font-family: Ancient;
 }
 
-@media screen and (max-width: 450px) {
-    .carousel {
-      display: none;
-    }
-  }
 
   @media screen and (max-width: 550px) {
     .arrow {
@@ -64,19 +59,6 @@ body{
 
 
   
-  .carousel {
-    animation: botAnimate 3s ease-in-out infinite; 
-  } 
-   
-
-  @keyframes botAnimate {
-    0% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
 
 
