@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 import { Card, FormField, Loader } from '../components';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 
 const RenderCards = ({ data, title }) => {
@@ -27,6 +30,19 @@ const Home = () => {
   const [searchText, setSearchText] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState(null);
+  const bg = useRef();
+
+
+  // useGSAP(()=>{
+  //   gsap.to(bg.current, {
+  //     backgroundPositionX: "50%", // Moves the background horizontally
+  //     duration: 10, // Duration of the animation in seconds
+  //     repeat: -1, // Infinite loop
+  //     ease: "linear",
+  //   })
+  // })
+
+
 
 
   const handleSearchChange = (e) => {
@@ -80,6 +96,42 @@ const Home = () => {
 
 
   return (
+    <>
+      <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
+        {/* <div className="h-auto w-auto flex items-end justify-center">
+          <div className='mb-[5vw]'>
+            <img
+              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+              alt="image description"
+            />
+          </div>
+        </div>
+        <div className="h-auto w-auto flex items-end ">
+          <div className='mb-[5vw]'>
+            <img
+              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+              alt="image description"
+            />
+          </div>
+        </div>
+        <div className="h-auto w-auto flex items-start">
+          <div className='mb-[5vw]'>
+            <img
+              className="h-[20rem] w-[20rem] max-w-lg transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+              alt="image description"
+            />
+          </div>
+        </div> */}
+      </div>
+
+
+
+
+
+
     <div className='mt-20'>
     <section className="max-w-7xl mx-auto">
     <div>
@@ -128,6 +180,7 @@ const Home = () => {
     </div>
   </section>
   </div>
+  </>
    
 );
 };

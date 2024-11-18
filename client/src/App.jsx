@@ -111,7 +111,7 @@ const App = () => {
 
   <div className='relative '>
     <div className='absolute z-[0] w-full'>
-      <nav ref={nav} class="bg-[#151030]">
+      <nav ref={nav} class="bg-inherit">
         <div class="max-w-screen-xl flex no-wrap w-full items-center justify-between p-6 ">
           <a href="/" class="flex items-center jus space-x-3 md:space-x-14 rtl:space-x-reverse">
               <img ref={image} src="/logo.png" className='h-12 w-auto  logo ' alt="logo" />
@@ -150,7 +150,7 @@ const App = () => {
         </div>
       </nav>
     </div>
-    <div ref={back} className='h-[100vh] absolute z-[-1] w-full min-w-[254px] '>
+    <div ref={back} className='h-[100vh] back absolute z-[-1] w-full min-w-[254px] '>
       <div className='w-auto robot h-full bg-robot-pattern bg-cover bg-no-repeat bg-center backdrop-blur-md'>
         <div onClick={()=>setmedium(!medium)} className='flex justify-end p-5 cursor-pointer transform hover:scale-5  transition hover:-translate-y-1 duration-200 ease-in-out'>
           <svg className="navButtons w-5 h-5  text-white font-bold" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  fill="white" 
@@ -181,7 +181,7 @@ const App = () => {
 
 
 
-    <main className=" sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
+    <main className="w-full mt-0 bg-[#f9fafe]">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create-post" element={<CreatePost />} />
