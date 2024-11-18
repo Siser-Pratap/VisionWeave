@@ -100,23 +100,23 @@ const Home = () => {
   return (
     <>
     <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
-      <div className='w-full h-full mt-32 flex justify-center items-center flex-col gap-[0.2rem] sm:flex-row sm:mt-40 sm:gap-[4rem] '>
-        <div className='h-[50%] w-[50%] flex flex-col ml-0 sm:ml-20 '>
+      <div className='w-full h-full mt-32 flex justify-center items-center flex-col gap-[0.2rem] sm:flex-row sm:mt-30 sm:gap-[4rem] '>
+        <div className='h-[50%] w-[50%] flex flex-col ml-0  '>
           <div className='flex justify-center items-center flex-col gap-[0.2rem] sm:gap-[2rem]'>
             <h1 className='font-[Ancient] text-[2rem] text-transparent bg-secondary bg-clip-text'>Creativity, Unleashed.</h1>
-            <p>Leverage generative AI with a unique suite of tools to convey your ideas to the world.</p>
+            <p className='font-[Ancient] text-transparent text-[1.25rem] bg-white bg-clip-text'>Leverage generative AI with a unique suite of tools to convey your ideas to the world.</p>
           </div>
-          <div className='button mt-2 sm:mt-20'>
-              <button>Get Started</button>
-              <button>Developer </button>
-            </div>
+          <div className='button mt-2 sm:mt-20 flex justify-center items-center gap-[8px] sm:gap-[1rem]'>
+              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] ">Get Started</button>
+              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] ">Developer</button>
+          </div>
         </div>
         <div className='h-[80%] w-[80%] mb-40 sm:ml-20 sm:h-[50%] sm:w-[50%] sm:mb-20'>
-            <div className='w-full sm:w-auto'>
+            <div className='w-full sm:w-auto hover:scale-110'>
               <Carousel
                 className="rounded-xl w-full h-80"
                 autoplay="true"
-                autoplayDelay={1500}
+                autoplayDelay={2500}
                 loop="true"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                   <div className="absolute bottom-4 left-2/4 z-1 flex -translate-x-2/4 gap-2">
@@ -135,7 +135,7 @@ const Home = () => {
                   <img
                     src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"
                     alt="image 1"
-                    className='h-full w-full object-contain'
+                    className='h-full w-full object-contain '
                     
                   />
                   <img

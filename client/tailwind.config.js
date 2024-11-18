@@ -9,7 +9,7 @@ module.exports = withMT( {
   theme: {
     extend: {
       colors:{
-        
+        'primary':'linear-gradient(to right , #16bffd, #cb3066)'
       },
       backgroundImage: {
         // 'secondary': 'linear-gradient(90deg, rgba(169,22,231,1) 12%, rgba(210,0,255,1) 55%, rgba(9,9,121,1) 93%)',
