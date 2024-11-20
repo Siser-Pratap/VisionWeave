@@ -75,6 +75,25 @@ useEffect(() => {
 
 
   const carousel = document.querySelector(".carousel");
+  const svgElements = document.querySelectorAll(".svgis");
+
+svgElements.forEach(svg => {
+  svg.addEventListener("mouseenter", () => {
+    
+    gsap.to(svg.querySelector("a svg"), {
+      rotate: 90,
+    });
+  });
+
+  svg.addEventListener("mouseleave", () => {
+    
+    gsap.to(svg.querySelector("a svg"), {
+      rotate: 0,
+    });
+  });
+});
+
+
 
   const map = [
     {
@@ -286,13 +305,13 @@ carousel.addEventListener("mouseleave", () => {
     <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
       <div className='w-full h-full mt-32 flex justify-center items-center flex-col gap-[0.2rem] sm:flex-row sm:mt-30 sm:gap-[4rem] '>
         <div className='h-[50%] w-[50%] flex flex-col ml-0  '>
-          <div className='flex justify-center items-center flex-col gap-[0.2rem] sm:gap-[2rem]'>
+          <div className='flex justify-center items-center flex-col gap-[0.2rem] sm:gap-[2rem] ml-0 sm:ml-6'>
             <h1 className='font-[Ancient] text-[2rem] text-transparent bg-secondary bg-clip-text'>Creativity, Unleashed.</h1>
             <p className='font-[Ancient] text-transparent text-[1.25rem] bg-white bg-clip-text'>Leverage generative AI with a unique suite of tools to convey your ideas to the world.</p>
           </div>
-          <div className='button mt-2 sm:mt-20 flex justify-center items-center gap-[8px] sm:gap-[1rem]'>
-              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] ">Get Started</button>
-              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] ">Developer</button>
+          <div className='button mt-2 sm:mt-14 flex justify-center items-center gap-[8px] sm:gap-[1rem] '>
+              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] hover:text-white/50 text-[1.3rem] sm:text-[1.7rem]  ">Get Started</button>
+              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] sm:text-[1.7rem] ">Developer</button>
           </div>
         </div>
         <div className='h-[80%] w-[80%] mb-40 sm:ml-20 sm:h-[50%] sm:w-[50%] sm:mb-20'>
@@ -349,6 +368,81 @@ carousel.addEventListener("mouseleave", () => {
                   />
                 </Carousel>
             </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#050816] text-white pt-16 w-full h-auto">
+        <div class="my-20 ">
+          <h3 class="text-center text-gray-500 hover:bg-secondary bg-clip-text hover:text-transparent text-[2rem] mb-20 font-serif">As Featured In</h3>
+          <div class="flex justify-center items-center companies  text-gray-400 flex-col sm:flex-row  space-x-8 sm:gap-0 gap-[0.5rem]  ">
+            <span class="text-xl font-semibold hover:text-white/80 cursor-none font-serif">Business Insider</span>
+            <span class="text-xl font-semibold  hover:text-white/80 cursor-none font-serif">Smart Company</span>
+            <span class="text-xl font-semibold  hover:text-white/80 cursor-none font-serif">Financial Review</span>
+          </div>
+        </div>
+        <div className='flex justify-center items-center sm:flex-row flex-col sm:gap-[1rem] gap-[20px] sm:p-6 p-0'>
+          <div class="hover:border-2 svgis  hover:border-solid hover:border-secondary hover:shadow-md  hover:shadow-secondary p-6 rounded-xl text-center">
+            <h2 class="text-2xl font-semibold mb-4">For Creators</h2>
+            <p class="text-gray-400 mb-6">
+              Create production-quality visual assets for your projects with unprecedented quality, speed, and style-consistency.
+            </p>
+            <a href="#" class="inline-block bg-gray-700 rounded-full p-3">
+              <svg class="w-5 h-5 text-gray-300 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          
+          <div class="hover:border-2 svgis hover:border-solid hover:border-secondary hover:shadow-md  hover:shadow-secondary p-6 rounded-xl text-center">
+            <h2 class="text-2xl font-semibold mb-4">For Teams</h2>
+            <p class="text-gray-400 mb-6">
+              Bring your team's best ideas to life at scale, with our intuitive AI-first creative suite designed for collaboration and built for business.
+            </p>
+            <a href="#" class="inline-block bg-gray-700 rounded-full p-3">
+              <svg class="w-5 h-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          
+          <div class="hover:border-2 svgis hover:border-solid hover:border-secondary hover:shadow-md  hover:shadow-secondary p-6 rounded-xl text-center">
+            <h2 class="text-2xl font-semibold mb-4">For Developers</h2>
+            <p class="text-gray-400 mb-6">
+              Experience content creation excellence with Leonardo.AI's API. With unmatched scalability, effortlessly tailor outputs to your brand guideline.
+            </p>
+            <a href="#" class="inline-block bg-gray-700 rounded-full p-3">
+              <svg class="w-5 h-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div> 
+    </div>               
+
+  
+ 
+
+    <div className="bg-[#050816] text-white h-auto w-full flex flex-col gap-[20px] p-20">
+      <div className="flex flex-col items-center justify-center text-center p-4 h-[40vh]">
+        <h1 className="text-2xl  font-bold">
+          Unveil New Creative Horizons with{" "}
+          <span className="text-purple-400">Fine-tuned Models</span>
+        </h1>
+      </div>
+      <div  id="scroll" className="flex flex-col w-full mt-4 sm:mt-20 justify-center  items-center sm:flex-row overflow-auto gap-[20px] h-2/3 sm:h-[60vh]">
+        <div  class="hello1 overflow-hidden shadow-lg rounded-3xl cursor-pointer">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image1 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div  class="max-w-sm hello2 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image2 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div  class="max-w-sm hello3 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image3 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+        </div>
+        <div  class="max-w-sm hello4 overflow-hidden shadow-lg rounded-3xl ">
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image4 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
         </div>
       </div>
     </div>
@@ -437,31 +531,10 @@ carousel.addEventListener("mouseleave", () => {
         </div>
       </div>
     </div>
-    <div className="bg-[#050816] text-white h-auto w-full flex flex-col gap-[20px] p-20">
-      <div className="flex flex-col items-center justify-center text-center p-4 h-[40vh]">
-        <h1 className="text-2xl  font-bold">
-          Unveil New Creative Horizons with{" "}
-          <span className="text-purple-400">Fine-tuned Models</span>
-        </h1>
-      </div>
-      <div  id="scroll" className="flex flex-col w-full mt-4 sm:mt-20 justify-center  items-center sm:flex-row overflow-auto gap-[20px] h-2/3 sm:h-[60vh]">
-        <div  class="hello1 overflow-hidden shadow-lg rounded-3xl cursor-pointer">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image1 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
-        </div>
-        <div  class="max-w-sm hello2 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image2 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
-        </div>
-        <div  class="max-w-sm hello3 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image3 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
-        </div>
-        <div  class="max-w-sm hello4 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image4 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
-        </div>
-      </div>
-    </div>
+    
     <div className=' bg-[#050816]'>
       <div className='flex justify-center items-center flex-col gap-[20px]'>
-        <p className="mt-0 text-balance text-3xl font-semibold tracking-tight text-transparent bg-secondary bg-clip-text sm:text-6xl ml-16 sm:m-0 p-2">Choose the right plan for you</p>
+        <p className="mt-0 text-balance text-3xl font-semibold tracking-tight sm:text-6xl sm:ml-16 ml-0 sm:m-0 p-2 hover:text-white/90"><span className='bg-secondary text-transparent bg-clip-text p-1'>Platform</span>Gallery</p>
         <p className="mt-8 max-w-2xl text-pretty text-center text-lg font-medium text-gray-400 sm:text-xl/8 mx-1 sm:mx-0">Browse through a collection of imaginative and visually stunning images generated by Dall-E AI</p>
       </div>
     <section className="max-w-7xl mx-auto">
@@ -486,7 +559,7 @@ carousel.addEventListener("mouseleave", () => {
         <>
           {searchText && (
             <h2 className="font-medium text-[#666e75] text-xl mb-3">
-              Showing Resuls for <span className="text-[#222328]">{searchText}</span>:
+              Showing Results for <span className="text-[#222328]">{searchText}</span>:
             </h2>
           )}
           <div className="grid lg:grid-cols-4 sm:grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3">
@@ -507,6 +580,28 @@ carousel.addEventListener("mouseleave", () => {
     </div>
   </section>
   </div>
+  <footer class="bg-[#050816] text-gray-300 py-6 pt-20">
+    <div class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col">
+      <div class="flex sm:justify-between  flex-col gap-[20px] items-center mb-4 ">
+        <div class="space-x-2 sm:space-x-6 w-full">
+          <a href="#" class="text-sm hover:text-gray-400">About</a>
+          <a href="#" class="text-sm hover:text-gray-400">Pricing</a>
+          <a href="#" class="text-sm hover:text-gray-400">Developers</a>
+          <a href="#" class="text-sm hover:text-gray-400">Create</a>
+          <a href="#" class="text-sm hover:text-gray-400">Contribute</a>
+        </div>
+        <div class="flex space-x-4 ">
+          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
+      <p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p>
+    </div>
+</footer>
+
   </>
    
 );

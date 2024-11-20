@@ -35,7 +35,7 @@ const Card = ({_id, name, prompt, url}) => {
 
 
   return (
-    <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
+    <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card sm:p-0 p-2">
     <img
       className="w-full h-auto object-cover rounded-xl"
       src={url}
@@ -50,7 +50,7 @@ const Card = ({_id, name, prompt, url}) => {
           <p className="text-white/70 text-sm">{name}</p>
         </div>
         <button type="button" onClick={() => downloadImage(_id, url)} className="outline-none  border-none">
-          <img src={download} alt="download" className="w-6 h-6 object-contain invert " />
+          <img src={download} alt="download" className="w-6 h-6 object-contain invert" />
         </button>
       </div>
     </div>

@@ -21,7 +21,7 @@
   
 
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: serif;
 }
 
 @media screen and (min-width: 480px) {
@@ -58,6 +58,25 @@ body{
   }
 
 
+  @media screen and (max-width: 550px) {
+    .companies {
+      display: inline-block;
+      white-space: nowrap;
+      animation: moveLeftToRight 3s linear infinite alternate;
+    }
+  
+    @keyframes moveLeftToRight {
+      0% {
+        transform: translateX(-40%); /* Start off-screen from the left */
+      }
+      50% {
+        transform: translateX(6%); /* Move to the right off-screen */
+      }
+      100% {
+        transform: translateX(-40%); /* Move back to the left off-screen */
+      }
+    }
+  }
   
 
 

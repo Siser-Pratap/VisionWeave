@@ -114,6 +114,7 @@ const CreatePost = () => {
   };
 
   return (
+  <div className='p-20 bg-black'>
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
@@ -187,6 +188,7 @@ const CreatePost = () => {
         
       </form>
     </section>
+  </div>
   );
 };
 
