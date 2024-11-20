@@ -318,7 +318,7 @@ return (
             
           </form>
         </section>
-  <footer class="bg-inherit text-gray-300 py-6 pt-20">
+  <footer id="contact" class="bg-inherit text-gray-300 py-6 pt-20">
     <div class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col">
       <div class="flex sm:justify-between  flex-col gap-[20px] items-center mb-4 ">
         <div class="space-x-2 sm:space-x-6 w-full">
@@ -334,7 +334,7 @@ return (
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p>
+      <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
     </div>
   </footer>
   </div>

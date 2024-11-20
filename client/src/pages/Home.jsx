@@ -34,37 +34,7 @@ const Home = () => {
   const [searchedResults, setSearchedResults] = useState(null);
   const bg = useRef();
 
-  const models = [
-    {
-      id: 1,
-      title: "DreamShaper v7",
-      description:
-        "Lykon is back with another update. This model is great at a range of different styles.",
-      image: "https://via.placeholder.com/400x300",
-    },
-    {
-      id: 2,
-      title: "SDXL 1.0",
-      description:
-        "Diffusion-based text-to-image generative model.",
-      image: "https://via.placeholder.com/400x300",
-    },
-    {
-      id: 3,
-      title: "SDXL 0.9",
-      description:
-        "The latest Stable Diffusion model, currently in Beta.",
-      image: "https://via.placeholder.com/400x300",
-    },
-    {
-      id: 4,
-      title: "3D Animation Style",
-      description:
-        "Great at 3D film vibes, capable of complex scenes with rich color. Storyboard time!",
-      image: "https://via.placeholder.com/400x300",
-    },
-  ];
-
+  
 
 useEffect(() => {
   const img1 = document.querySelector(".image1");
@@ -576,7 +546,7 @@ carousel.addEventListener("mouseleave", () => {
     </div>
   </section>
   </div>
-  <footer class="bg-[#050816] text-gray-300 py-6 pt-20">
+  <footer id="contact" class="bg-[#050816] text-gray-300 py-6 pt-20">
     <div class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col">
       <div class="flex sm:justify-between  flex-col gap-[20px] items-center mb-4 ">
         <div class="space-x-2 sm:space-x-6 w-full">
@@ -594,7 +564,7 @@ carousel.addEventListener("mouseleave", () => {
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p>
+      <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
     </div>
   </footer>
   
