@@ -584,7 +584,7 @@ carousel.addEventListener("mouseleave", () => {
           <a href="#pricing" class="text-sm hover:text-gray-400">Pricing</a>
           <a href="https://github.com/Siser-Pratap" alt="github.com/siser-pratap" class="text-sm hover:text-gray-400">Developers</a>
           <a href="/create-post" class="text-sm hover:text-gray-400">Create</a>
-          <a href="https://github.com/Siser-Pratap/Image_Gen" class="text-sm hover:text-gray-400">Contribute</a>
+          <a href="https://github.com/Siser-Pratap/VisionWave" class="text-sm hover:text-gray-400">Contribute</a>
         </div>
         <div class="flex space-x-4 ">
           <a href="https://www.instagram.com/siser_ins17/" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
