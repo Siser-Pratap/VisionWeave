@@ -132,7 +132,7 @@ svgElements.forEach(svg => {
 });
 
 img2.addEventListener("mouseenter", () => {
-  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726383582/ctzz89ba5ggun1lbtqmq.jpg"; 
   
   gsap.to(img2, {
     duration: 0,
@@ -148,7 +148,7 @@ img2.addEventListener("mouseenter", () => {
 });
 
 img2.addEventListener("mouseleave", () => {
-  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  img2.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726249327/v5ef2r4kqocgjsn08ryp.jpg"; 
   gsap.to(img2, {
     duration: 0,
     ease: "power1.out",
@@ -161,7 +161,7 @@ img2.addEventListener("mouseleave", () => {
 });
 
 img3.addEventListener("mouseenter", () => {
-  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726250205/hxjn533ckxv6yvnk2xre.jpg"; 
   
   gsap.to(img3, {
     duration: 0,
@@ -177,7 +177,7 @@ img3.addEventListener("mouseenter", () => {
 });
 
 img3.addEventListener("mouseleave", () => {
-  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  img3.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726245135/ji1ddkko6dq96vczswwq.jpg"; 
   gsap.to(img3, {
     duration: 0,
     ease: "power1.out",
@@ -190,7 +190,7 @@ img3.addEventListener("mouseleave", () => {
 });
 
 img4.addEventListener("mouseenter", () => {
-  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1731469315/sufhgv3wymtmtl928lgq.jpg"; 
+  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726429140/lzsblbv4qoanutf63fpy.jpg"; 
   
   gsap.to(img4, {
     duration: 0,
@@ -206,7 +206,7 @@ img4.addEventListener("mouseenter", () => {
 });
 
 img4.addEventListener("mouseleave", () => {
-  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg"; 
+  img4.src = "https://res.cloudinary.com/di4jbsdwo/image/upload/v1726245586/stpqtcymqikntwtrm5te.jpg"; 
   gsap.to(img4, {
     duration: 0,
     ease: "power1.out",
@@ -310,8 +310,8 @@ carousel.addEventListener("mouseleave", () => {
             <p className='font-[Ancient] text-transparent text-[1.25rem] bg-white bg-clip-text'>Leverage generative AI with a unique suite of tools to convey your ideas to the world.</p>
           </div>
           <div className='button mt-2 sm:mt-14 flex justify-center items-center gap-[8px] sm:gap-[1rem] '>
-              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] hover:text-white/50 text-[1.3rem] sm:text-[1.7rem]  ">Get Started</button>
-              <button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] sm:text-[1.7rem] ">Developer</button>
+              <a href="/create-post"><button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] hover:text-white/50 text-[1.3rem] sm:text-[1.7rem]  ">Get Started</button></a>
+              <a href="https://github.com/Siser-Pratap" alt="github.com/siser-pratap"><button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] sm:text-[1.7rem] ">Developer</button></a>
           </div>
         </div>
         <div className='h-[80%] w-[80%] mb-40 sm:ml-20 sm:h-[50%] sm:w-[50%] sm:mb-20'>
@@ -371,7 +371,7 @@ carousel.addEventListener("mouseleave", () => {
         </div>
       </div>
     </div>
-    <div class="bg-[#050816] text-white pt-16 w-full h-auto">
+    <div id="about" class="bg-[#050816] text-white pt-16 w-full h-auto">
         <div class="my-20 ">
           <h3 class="text-center text-gray-500 hover:bg-secondary bg-clip-text hover:text-transparent text-[2rem] mb-20 font-serif">As Featured In</h3>
           <div class="flex justify-center items-center companies  text-gray-400 flex-col sm:flex-row  space-x-8 sm:gap-0 gap-[0.5rem]  ">
@@ -410,7 +410,7 @@ carousel.addEventListener("mouseleave", () => {
           <div class="hover:border-2 svgis hover:border-solid hover:border-secondary hover:shadow-md  hover:shadow-secondary p-6 rounded-xl text-center">
             <h2 class="text-2xl font-semibold mb-4">For Developers</h2>
             <p class="text-gray-400 mb-6">
-              Experience content creation excellence with Leonardo.AI's API. With unmatched scalability, effortlessly tailor outputs to your brand guideline.
+              Experience content creation excellence with VisionWeave.AI's API. With unmatched scalability, effortlessly tailor outputs to your brand guideline.
             </p>
             <a href="#" class="inline-block bg-gray-700 rounded-full p-3">
               <svg class="w-5 h-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -420,11 +420,7 @@ carousel.addEventListener("mouseleave", () => {
           </div>
         </div> 
     </div>               
-
-  
- 
-
-    <div className="bg-[#050816] text-white h-auto w-full flex flex-col gap-[20px] p-20">
+  <div className="bg-[#050816] text-white h-auto w-full flex flex-col gap-[20px] p-20">
       <div className="flex flex-col items-center justify-center text-center p-4 h-[40vh]">
         <h1 className="text-2xl  font-bold">
           Unveil New Creative Horizons with{" "}
@@ -436,19 +432,19 @@ carousel.addEventListener("mouseleave", () => {
           <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image1 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
         </div>
         <div  class="max-w-sm hello2 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image2 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1727459785/xiurjqhcgqsii7cglh4q.jpg" alt="Sunset in the mountains" />
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image2 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726249327/v5ef2r4kqocgjsn08ryp.jpg" alt="A sea otter" />
         </div>
         <div  class="max-w-sm hello3 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image3 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw] image3 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726245135/ji1ddkko6dq96vczswwq.jpg" alt="Astronaut" />
         </div>
         <div  class="max-w-sm hello4 overflow-hidden shadow-lg rounded-3xl ">
-          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image4 blur-[2px]" src="/images/pexels.jpg" alt="Sunset in the mountains" />
+          <img  class="w-full h-[40vh] sm:h-[50vh] sm:w-[20vw]  image4 blur-[2px]" src="https://res.cloudinary.com/di4jbsdwo/image/upload/v1726245586/stpqtcymqikntwtrm5te.jpg" alt="Sunset in the sea" />
         </div>
       </div>
     </div>
-    <div className='h-auto w-full bg-[#050816]'>
+    <div  className='h-auto w-full bg-[#050816]'>
       <div className='p-6 h-full w-full'>
-        <div className='pricing'>
+        <div id="pricing" className='pricing'>
                 <div className="relative isolate  px-6 py-24 sm:py-32 lg:px-8">
                 <div
                   className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -490,7 +486,7 @@ carousel.addEventListener("mouseleave", () => {
                   </li>
                 </ul>
                 <a
-                  href="#!"
+                  href="/create-post"
                   ariaDescribedby="tier-hobby"
                   className="mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white/60 ring-1 ring-inset hover:bg-secondary hover:text-black ring-indigo-200 hover:ring-indigo-300"
                 >
@@ -524,7 +520,7 @@ carousel.addEventListener("mouseleave", () => {
                     HD 4k Downloadable Images
                   </li>
                 </ul>
-              <a href="#" aria-describedby="tier-enterprise" class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-secondary hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Get started today</a>
+              <a href="/create-post" aria-describedby="tier-enterprise" class="mt-8 block rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-secondary hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:mt-10">Get started today</a>
                   </div>
                 </div>
             </div>
@@ -584,23 +580,24 @@ carousel.addEventListener("mouseleave", () => {
     <div class="max-w-7xl mx-auto px-4 flex justify-center items-center flex-col">
       <div class="flex sm:justify-between  flex-col gap-[20px] items-center mb-4 ">
         <div class="space-x-2 sm:space-x-6 w-full">
-          <a href="#" class="text-sm hover:text-gray-400">About</a>
-          <a href="#" class="text-sm hover:text-gray-400">Pricing</a>
-          <a href="#" class="text-sm hover:text-gray-400">Developers</a>
-          <a href="#" class="text-sm hover:text-gray-400">Create</a>
-          <a href="#" class="text-sm hover:text-gray-400">Contribute</a>
+          <a href="#about" class="text-sm hover:text-gray-400">About</a>
+          <a href="#pricing" class="text-sm hover:text-gray-400">Pricing</a>
+          <a href="https://github.com/Siser-Pratap" alt="github.com/siser-pratap" class="text-sm hover:text-gray-400">Developers</a>
+          <a href="/create-post" class="text-sm hover:text-gray-400">Create</a>
+          <a href="https://github.com/Siser-Pratap/Image_Gen" class="text-sm hover:text-gray-400">Contribute</a>
         </div>
         <div class="flex space-x-4 ">
-          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
-          <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/siser_ins17/" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          {/* <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-twitter"></i></a> */}
+          <a href="https://github.com/Siser-Pratap" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="www.linkedin.com/in/siser" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       <p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p>
     </div>
-</footer>
+  </footer>
+  
 
   </>
    
