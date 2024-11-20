@@ -7,15 +7,23 @@ VisionWave is an AI-powered platform that allows users to generate images by sim
 Clone to the Project using : git clone https://github.com/Siser-Pratap/VisionWave.git
 
 # Run the Frontend 
+
 => cd client
+
 => npm i
+
 => npm run dev
 
-#Deploy the backend
+# Deploy the backend
+
 => cd client
+
 => npm i
+
 => Add your Cloudinary API Details in a .env file
+
 => Add your Mongodb database details 
+
 => nodemon start or npm start
 
 ## Usage
