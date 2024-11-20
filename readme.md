@@ -1,32 +1,25 @@
-VisionWave
-Image_Gen is an AI-powered platform that allows users to generate images by simply providing text prompts. Built with the Segmind API, this Website enables users to explore creativity by creating, sharing, and downloading images.
+# VisionWave
 
-# Foobar
-
-Foobar is a Python library for dealing with word pluralization.
+VisionWave is an AI-powered platform that allows users to generate images by simply providing text prompts. Built with the Segmind API, this Website enables users to explore creativity by creating, sharing, and downloading images.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Clone to the Project using : git clone https://github.com/Siser-Pratap/VisionWave.git
 
-```bash
-pip install foobar
-```
+# Run the Frontend 
+=> cd client
+=> npm i
+=> npm run dev
+
+#Deploy the backend
+=> cd client
+=> npm i
+=> Add your Cloudinary API Details in a .env file
+=> Add your Mongodb database details 
+=> nodemon start or npm start
 
 ## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+Generate High Quality Images by providing prompt
 
 ## Contributing
 
@@ -35,6 +28,4 @@ to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
