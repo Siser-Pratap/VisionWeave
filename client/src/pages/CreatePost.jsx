@@ -247,7 +247,7 @@ return (
         <section className="max-w-7xl mx-auto my-20 flex justify-center items-center sm:items-baseline flex-col">
           <div id="create">
             <h1 className="inline font-serif text-[2rem] transform hover:translate-y-[-3px] transition duration-300 ease-in-out text-white/80 py-2 sm:px-3 px-0 md:p-0 bg-inherit hover:text-transparent hover:bg-secondary bg-clip-text">Create</h1>
-            <p className="mt-2 text-[1rem] text-gray-500 max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
+            <p className="mt-2 text-[1rem] text-gray-500 max-w-[500px]">Generate an imaginative image through VisionWeave AI and share it with the community</p>
           </div>
           <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-5">
