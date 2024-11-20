@@ -1,6 +1,6 @@
-# PixLark
+# VisionWeave
 
-PixLark is an AI-powered platform that allows users to generate images by simply providing text prompts. Built with the Segmind API, this Website enables users to explore creativity by creating, sharing, and downloading images.
+VisionWeave is an AI-powered platform that allows users to generate images by simply providing text prompts. Built with the Segmind API, this Website enables users to explore creativity by creating, sharing, and downloading images.
 
 ## Installation
 
