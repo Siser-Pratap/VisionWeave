@@ -243,7 +243,7 @@ return (
           </div>
         </div>
   </div>
-  <div  className='pt-20 px-20 w-full h-auto bg-love bg-cover'>
+  <div  className='pt-20 px-20 w-full h-auto bg-[#050816] bg-cover'>
         <section className="max-w-7xl mx-auto my-20 flex justify-center items-center sm:items-baseline flex-col">
           <div id="create">
             <h1 className="inline font-serif text-[2rem] transform hover:translate-y-[-3px] transition duration-300 ease-in-out text-white/80 py-2 sm:px-3 px-0 md:p-0 bg-inherit hover:text-transparent hover:bg-secondary bg-clip-text">Create</h1>
@@ -334,7 +334,7 @@ return (
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
+      {/* <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a> */}
     </div>
   </footer>
   </div>

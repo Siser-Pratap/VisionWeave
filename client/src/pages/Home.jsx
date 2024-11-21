@@ -272,7 +272,7 @@ carousel.addEventListener("mouseleave", () => {
 
   return (
     <>
-    <div ref={bg} className="h-[100vh] bg-love bg-cover w-full p-6">
+    <div ref={bg} className="h-[100vh] bg-[#050816] bg-cover w-full p-6">
       <div className='w-full h-full mt-32 flex justify-center items-center flex-col gap-[0.2rem] sm:flex-row sm:mt-30 sm:gap-[4rem] '>
         <div className='h-[50%] w-[50%] flex flex-col ml-0  '>
           <div className='flex justify-center items-center flex-col gap-[0.2rem] sm:gap-[2rem] ml-0 sm:ml-6'>
@@ -564,7 +564,7 @@ carousel.addEventListener("mouseleave", () => {
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
+      {/* <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a> */}
     </div>
   </footer>
   
