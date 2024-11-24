@@ -16,7 +16,7 @@ Clone to the Project using : git clone https://github.com/Siser-Pratap/VisionWav
 
 # Deploy the backend
 
--> cd client
+-> cd server
 
 -> npm i
 
