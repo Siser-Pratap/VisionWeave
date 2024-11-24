@@ -8,23 +8,23 @@ Clone to the Project using : git clone https://github.com/Siser-Pratap/VisionWav
 
 # Run the Frontend 
 
-=> cd client
+-> cd client
 
-=> npm i
+-> npm i
 
-=> npm run dev
+-> npm run dev
 
 # Deploy the backend
 
-=> cd client
+-> cd client
 
-=> npm i
+-> npm i
 
-=> Add your Cloudinary API Details in a .env file
+-> Add your Cloudinary API Details in a .env file
 
-=> Add your Mongodb database details 
+-> Add your Mongodb database details 
 
-=> nodemon start or npm start
+-> nodemon start or npm start
 
 ## Usage
 Generate High Quality Images by providing prompt
