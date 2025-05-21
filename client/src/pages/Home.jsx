@@ -281,7 +281,7 @@ carousel.addEventListener("mouseleave", () => {
           </div>
           <div className='button mt-2 sm:mt-14 flex justify-center items-center gap-[8px] sm:gap-[1rem] '>
               <a href="/create-post"><button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md p-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] hover:text-white/50 text-[1.3rem] sm:text-[1.7rem]  ">Get Started</button></a>
-              <a href="https://github.com/Siser-Pratap" alt="github.com/siser-pratap"><button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] sm:text-[1.7rem] ">Developer</button></a>
+              <a href="https://github.com/Atal26" alt="github.com/Atal26"><button type="button" class="font-medium justify-end rounded-[20px] text-black text-sm sm:text-md px-4 py-2 sm:p-4 text-center bg-secondary hover:bg-tertiary font-[Ancient] text-[1.3rem] sm:text-[1.7rem] ">Developer</button></a>
           </div>
         </div>
         <div className='h-[80%] w-[80%] mb-40 sm:ml-20 sm:h-[50%] sm:w-[50%] sm:mb-20'>
@@ -552,19 +552,19 @@ carousel.addEventListener("mouseleave", () => {
         <div class="space-x-2 sm:space-x-6 w-full">
           <a href="#about" class="text-sm hover:text-gray-400">About</a>
           <a href="#pricing" class="text-sm hover:text-gray-400">Pricing</a>
-          <a href="https://github.com/Siser-Pratap" alt="github.com/siser-pratap" class="text-sm hover:text-gray-400">Developers</a>
+          <a href="https://github.com/Atal26" alt="github.com/Atal26" class="text-sm hover:text-gray-400">Developers</a>
           <a href="/create-post" class="text-sm hover:text-gray-400">Create</a>
-          <a href="https://github.com/Siser-Pratap/VisionWave" class="text-sm hover:text-gray-400">Contribute</a>
+          <a href="https://github.com/Atal26/VisionWave" class="text-sm hover:text-gray-400">Contribute</a>
         </div>
         <div class="flex space-x-4 ">
-          <a href="https://www.instagram.com/siser_ins17/" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+          {/* <a href="https://www.instagram.com/siser_ins17/" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a> */}
           {/* <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-twitter"></i></a> */}
-          <a href="https://github.com/Siser-Pratap" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
-          <a href="www.linkedin.com/in/siser" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Atal26" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="www.linkedin.com/in/atal-gupta-992833242" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <a href="www.github.com/siser-pratap"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
+      <a href="www.github.com/Atal26"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Atal Gupta</p></a>
     </div>
   </footer>
   
