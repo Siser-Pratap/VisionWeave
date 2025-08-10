@@ -564,7 +564,7 @@ carousel.addEventListener("mouseleave", () => {
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
-      <a href="www.github.com/Atal26"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Atal Gupta</p></a>
+      <a href="www.github.com/Atal26"><p className='text-center bg-secondary bg-clip-text text-[2rem] mt-2 text-transparent cursor-pointer'>Made by Siser Pratap</p></a>
     </div>
   </footer>
   
