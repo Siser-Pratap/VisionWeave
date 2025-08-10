@@ -559,8 +559,8 @@ carousel.addEventListener("mouseleave", () => {
         <div class="flex space-x-4 ">
           {/* <a href="https://www.instagram.com/siser_ins17/" class="text-gray-300 hover:text-gray-400"><i class="fab fa-instagram"></i></a> */}
           {/* <a href="#" class="text-gray-300 hover:text-gray-400"><i class="fab fa-twitter"></i></a> */}
-          <a href="https://github.com/Atal26" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
-          <a href="www.linkedin.com/in/atal-gupta-992833242" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Siser-Pratap" class="text-gray-300 hover:text-gray-400"><i class="fab fa-github"></i></a>
+          <a href="www.linkedin.com/in/siser" class="text-gray-300 hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
       <p class="text-sm text-center text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
